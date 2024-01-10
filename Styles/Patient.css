@@ -1,0 +1,186 @@
+﻿body {
+    background-color: #F4F5F6;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px 15px 40px;
+    background-color: #D4E4ED;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+    .header-left span {
+        display: block;
+        padding: 10px;
+    }
+
+        .header-left span:last-child {
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+.column {
+    background-color: #ffffff;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.profile-view {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+    .profile-view img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+.logout-button {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+    .logout-button img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+.content-container {
+    margin: 20px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+    .search-container input[type="text"] {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-right: 5px;
+    }
+
+.add-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 20px;
+    color: #337ab7;
+    margin-right: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+    table th,
+    table td {
+        padding: 10px;
+        text-align: left;
+    }
+
+    table th {
+        background-color: #D4E4ED;
+        font-weight: bold;
+    }
+
+    table tr:nth-child(even) {
+        background-color: #F4F5F6;
+    }
+
+.view-button,
+.delete-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.view-button {
+    color: #337ab7;
+}
+
+.delete-button {
+    color: #d9534f;
+}
+
+.textbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+    .textbox-container label {
+        flex-basis: 120px;
+        flex-shrink: 0;
+        margin-right: 10px;
+    }
+
+    .textbox-container input[type="text"] {
+        flex-grow: 1;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+/* Styles for the modal dialog */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+.highlight {
+    background-color: yellow;
+    /* Add any other styles to highlight the matching rows */
+}

@@ -1,0 +1,107 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="WithBackBtn.master.cs" Inherits="Gebuu.WithBackBtn" %>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="../Styles/Header.css" rel="stylesheet" />
+    <script src="../Script/Redirect.js"></script>
+
+    <style>
+        .back-button {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 24px;
+            color: #333;
+            background-color: #f8f8f8;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px;
+            transition: background-color 0.3s ease-in-out;
+            font-weight: bold;
+            margin-top: -20px;
+        }
+
+        .back-button:hover {
+            background-color: #ddd;
+        }
+
+        .header-text {
+            text-align:center;
+            margin-left:1000px;
+        }
+
+        .header-mid {
+            margin-left: -1000px;
+        }
+
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header class="header">
+            <div class="header-left">
+                
+                <a href="https://localhost:44322/aspx_Main/HomePage.aspx" class="back-button" onclick="goBack()">&lt;</a>
+
+                    <img src="../Resources/Gebuu%20Veterinary%20Clinic.png" alt="Gebuu Veterinary Clinic Logo" style="padding-top: 20px">
+                
+                <br />
+                <div class="header-text">
+                    <p></p>
+                    <h2>
+                        &nbsp;</h2>
+                    <h2>
+                        <asp:Label ID="Lbl_row1" runat="server" Text="" style="font-size: large; color: #000000"></asp:Label>
+                    </h2>
+                    <h4>
+                        <asp:Label ID="Lbl_row2" runat="server" Text="" style="font-size: medium; color: #000000"></asp:Label>
+                    </h4>
+                </div>
+            </div>
+
+            <div class="header-mid">
+                <label>Gebuu Veterinary Clinic Management System</label>
+                <label>Parit Raja Branch</label>
+            </div>
+
+            <div class="header-right">
+                <button type="button" class="Btn" onclick="confirmAndRedirect()">
+                    <div class="sign">
+                        <svg viewBox="0 0 512 512">
+                            <path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path>
+                        </svg>
+                    </div>
+                    <div class="text">Logout</div>
+                </button>
+            </div>
+        </header>
+
+        <div class="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="clear"></div>
+        <div class="footer">
+            <h2>© Copyright by Gebuu Veterinary Clinic</h2>
+        </div>
+    </form>
+
+    <script>
+            function confirmAndRedirect() {
+                var isConfirmed = confirm("Are you sure you want to logout?");
+                    if (isConfirmed) {
+                        console.log("Redirecting to Login.aspx");
+                    window.location.href = "../aspx_Main/Login.aspx";
+                }
+            }
+
+        function goBack() {
+            // Implement the goBack function logic if needed
+        }
+    </script>
+</body>
+</html>

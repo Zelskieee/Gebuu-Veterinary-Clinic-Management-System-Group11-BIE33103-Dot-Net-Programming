@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SuccessInsertion.master.cs" Inherits="Gebuu.SuccessInsertion1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+    <link href="../Styles/MasterPage.css" rel="stylesheet" />
+    <link href="../Styles/StyleSheet.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="success-message-container">
+            <h2>Data Inserted Successfully</h2>
+            <div class="countdown-container">
+                Redirecting to Home Page in <span id="countdown">5</span> seconds...
+            </div>
+        </div>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            
+        </asp:ContentPlaceHolder>
+
+        <script>
+            // Timer countdown
+            var seconds = 5;
+            var countdownElement = document.getElementById("countdown");
+
+            function updateCountdown() {
+                countdownElement.textContent = seconds;
+                seconds--;
+
+                if (seconds < 0) {
+                    // Redirect after countdown
+                    window.location.href = "https://localhost:44322/aspx_Main/HomePage.aspx";
+                } else {
+                    setTimeout(updateCountdown, 1000);
+                }
+            }
+
+            updateCountdown();
+        </script>
+    </form>
+</body>
+</html>

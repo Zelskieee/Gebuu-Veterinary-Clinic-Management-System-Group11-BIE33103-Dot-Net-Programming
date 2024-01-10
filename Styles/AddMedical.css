@@ -1,0 +1,134 @@
+﻿body {
+    background-color: #F4F5F6;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px 15px 40px;
+    background-color: #D4E4ED;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+    .header-left span {
+        display: block;
+        padding: 10px;
+    }
+
+        .header-left span:last-child {
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+.column {
+    background-color: #ffffff;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.profile-view {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+    .profile-view img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+.logout-button {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+    .logout-button img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+.content-container {
+    margin: 30px auto;
+    max-width: 500px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.medical-record-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+    button[type="submit"]:hover {
+        background-color: #3367d6;
+    }
+
+    button[type="submit"]:focus {
+        outline: none;
+    }
+
+    button[type="submit"]:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+    }
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

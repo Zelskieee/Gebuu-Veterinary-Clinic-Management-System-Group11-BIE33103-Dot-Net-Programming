@@ -1,0 +1,149 @@
+﻿body {
+    background-color: #F4F5F6;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #D4E4ED;
+    margin-bottom: 20px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+    .header-left h2 {
+        margin: 0;
+    }
+
+    .header-left span {
+        display: block;
+        padding: 10px;
+    }
+
+        .header-left span:last-child {
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.order-table {
+    width: 100%;
+    background-color: #ffffff;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+    .order-table th,
+    .order-table td {
+        padding: 15px 10px;
+        text-align: left;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .order-table th {
+        font-weight: bold;
+    }
+
+    .order-table td:last-child,
+    .order-table td:nth-child(5) {
+        text-align: left;
+    }
+
+    .order-table td {
+        background-color: #f9f9f9;
+    }
+
+    .order-table tr:nth-child(even) td {
+        background-color: #f2f2f2;
+    }
+
+    .order-table th,
+    .order-table td {
+        padding: 15px 20px; /* Increase padding for better spacing */
+    }
+
+.admit-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+    .admit-buttons button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 12px;
+        background-color: #4CAF50;
+        color: #ffffff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-right: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease;
+    }
+
+        .admit-buttons button:hover {
+            background-color: #45A049;
+        }
+
+        .admit-buttons button:focus {
+            outline: none;
+            box-shadow: 0 0 4px #45A049;
+        }
+
+    .admit-buttons .functionality-icon {
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+        .admit-buttons .functionality-icon i {
+            color: #4CAF50;
+            font-size: 20px;
+        }
+
+        .admit-buttons .functionality-icon:hover i {
+            color: #83e60b;
+        }
+
+.profile-view,
+.logout-button {
+    display: flex;
+    align-items: center;
+}
+
+    .profile-view img,
+    .logout-button img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }

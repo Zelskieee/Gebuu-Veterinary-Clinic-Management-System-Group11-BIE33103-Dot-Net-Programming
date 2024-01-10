@@ -1,0 +1,98 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    background-color: #ECE2C1;
+    background-image: url('../Resources/cat.png'); /* Add the path to your background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0; /* Remove default body margin */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.popup {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 320px;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2); /* Increased shadow for a more pronounced effect */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+    /* Add a pseudo-element for the shadow on the popup side */
+    .popup::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -10px; /* Adjust the offset based on your design */
+        width: 10px;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.1), transparent);
+    }
+
+.form-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+    .form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+        .form-group input:hover {
+            background-color: lightgrey;
+        }
+
+#btnLogin {
+    width: 100%;
+    padding-right: 50px;
+    padding-left: 50px;
+    background-color: black;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+    #btnLogin:hover {
+        width: 100%;
+        padding-right: 80px;
+        padding-left: 80px;
+        background-color: white;
+        border: none;
+        color: black;
+        font-weight: normal;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-top: 10px;
+        border: 1px solid;
+        transition: transform 0.7s ease;
+    }
+
+img {
+    text-align: center;
+    max-width: 50%;
+    height: auto;
+    width: auto;
+    padding-left: 7px;
+}
